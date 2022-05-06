@@ -1,3 +1,5 @@
+/*------------------------- RULES -------------------------*/
+
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
@@ -14,7 +16,7 @@
   font-weight: bold;
 }
 
-/*------------------------- GERAL -------------------------*/
+/*------------------------- GENERAL -------------------------*/
 
 * {
   margin: 0;
@@ -28,10 +30,14 @@
   --paragraph-font: 'Quicksand', sans-serif;
   --title-font: 'Roboto', sans-serif;
 
-  --main-title-background: linear-gradient(180deg, hsl(33, 100%, 66%), hsl(21, 84%, 58%));
+  --main-title-background: linear-gradient(
+    180deg,
+    hsl(33, 100%, 66%),
+    hsl(21, 84%, 58%)
+  );
   --secondary-title-color: hsl(21, 84%, 58%);
-  --subtitle-color: #4E4E4E;
-  --nav-color: #725C5C;
+  --subtitle-color: #4e4e4e;
+  --nav-color: #725c5c;
 
   font-size: 62.5%;
 }
@@ -40,7 +46,8 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -58,14 +65,14 @@ img {
   max-width: 62.1rem;
 }
 
-/*----------------------- NAVIGATION ------------------------*/
+/*---------------------- NAVIGATION -----------------------*/
 
 nav#slaca {
-  box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 0.25);
+  box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, 0.25);
 
   display: flex;
   flex-direction: column;
-  
+
   max-width: 22rem;
   height: 100%;
 }
@@ -86,11 +93,12 @@ nav div #title {
 }
 
 div#logo {
-  max-width: 20rem;
+  max-width: 22rem;
+  text-align: center;
 }
 
 div#navigation #navbar li {
-  border-bottom: 2px solid hsl(0, 0%, 91%);
+  border-bottom: 0.2rem solid hsl(0, 0%, 91%);
 
   padding-left: 2.4rem;
   padding-block: 0.7rem;
@@ -102,7 +110,7 @@ div#navigation #navbar li:nth-child(5) {
 }
 
 div#navigation #navbar li .slaca-links .actual-link {
-  background-image: linear-gradient(180deg, #FFB455 0%, #ED7839 100%);
+  background-image: linear-gradient(180deg, #ffb455 0%, #ed7839 100%);
 
   width: 0.5rem;
   height: 3.3rem;
@@ -116,4 +124,101 @@ div#navigation #navbar li .slaca-links {
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: max-content;
+}
+
+div#navigation #navbar li .slaca-links:hover {
+  text-decoration: underline;
+}
+
+/*----------------------- HEADER ------------------------*/
+
+header#header {
+  background-color: hsl(20, 82%, 96%);
+
+  max-height: 7.5rem;
+  width: 114.6rem;
+  margin-left: 22rem;
+  padding-block: 1rem;
+  padding-left: 3.6rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+
+  font-family: var(--title-font);
+  color: var(--nav-color);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+header#header #header-title {
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--nav-color);
+}
+
+header#header #header-title h4 {
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+header#header #header-title h3 {
+  line-height: 2.6rem;
+  font-size: 2.2rem;
+}
+
+header#header #header-title p {
+  line-height: 1.6rem;
+  font-size: 1.4rem;
+}
+
+header#header #language-button {
+  border: 0.1rem solid hsl(0, 0%, 80%);
+}
+
+header#header #language-button #languages {
+  background: none;
+  background: url('../assets/images/lang-icon.png') no-repeat left center;
+  padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+  font-family: var(--paragraph-font);
+  font-size: 1.5rem;
+  text-align: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header#header #language-button #languages:hover {
+  background-color: hsl(20, 82%, 94%);
+}
+
+header#header #language-button #languages:focus {
+  outline: none;
+}
+
+header#header #login {
+  color: #333333;
+  font-family: var(--paragraph-font);
+}
+
+header#header #login h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: right;
+  line-height: 1.7rem;
+}
+
+header#header #login p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+header#header #login-img {
+  width: 4.8rem;
+  height: 4.7rem;
 }
