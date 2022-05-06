@@ -1,0 +1,21 @@
+----------------------------------------- Dúvidas -------------------------------------------------
+https://www.w3schools.com/
+https://css-tricks.com/snippets/css/using-font-face-in-css/
+
+----------------------------------------- Fontes --------------------------------------------------
+https://fonts.google.com/
+https://www.dafontfree.io/download/segoe-ui/
+
+----------------------------------------- Paleta de cores -----------------------------------------
+
+header - SLACA 2019:
+background: linear-gradient(180deg, hsl(33, 100%, 66%), hsl(21, 84%, 58%));
+
+h2: hsl(21, 84%, 58%)
+
+-------------------------------------- Extensões do Chrome -----------------------------------
+ColorZilla
+
+-------------------------------------- Músicas -----------------------------------
+Instrumentais que utilizei para me concentrar no projeto (e também para relaxar um pouco)
+https://www.youtube.com/watch?v=8A6HC3CAwKs
