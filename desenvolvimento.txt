@@ -1,6 +1,8 @@
 ----------------------------------------- Dúvidas -------------------------------------------------
 https://www.w3schools.com/
 https://css-tricks.com/snippets/css/using-font-face-in-css/
+Botão - Ver mais, Ver menos:
+https://www.youtube.com/watch?v=ksdecjN_rm0/
 
 ----------------------------------------- Fontes --------------------------------------------------
 https://fonts.google.com/
@@ -16,6 +18,12 @@ h2: hsl(21, 84%, 58%)
 -------------------------------------- Extensões do Chrome -----------------------------------
 ColorZilla
 
--------------------------------------- Músicas -----------------------------------
+----------------------------------------------- Músicas --------------------------------------------
 Instrumentais que utilizei para me concentrar no projeto (e também para relaxar um pouco)
 https://www.youtube.com/watch?v=8A6HC3CAwKs
+
+----------------------------------------------- Grid Areas ----------------------------------------
+slaca (nav)
+header
+content
+footer

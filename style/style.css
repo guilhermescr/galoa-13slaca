@@ -35,8 +35,8 @@
     hsl(33, 100%, 66%),
     hsl(21, 84%, 58%)
   );
-  --secondary-title-color: hsl(21, 84%, 58%);
-  --subtitle-color: #4e4e4e;
+  --secondary-title-color: hsl(21, 83%, 58%);
+  --subtitle-color: hsl(0, 0%, 31%);
   --nav-color: #725c5c;
 
   font-size: 62.5%;
@@ -61,13 +61,52 @@ img {
   max-width: 100%;
 }
 
-.main-section {
-  max-width: 62.1rem;
+ul {
+  list-style: none;
+}
+
+.subtitles {
+  background-color: hsl(20, 82%, 96%);
+  color: var(--subtitle-color);
+  border: 0.1rem solid hsl(0, 0%, 93%); /* 1px = 0.1rem */
+
+  padding-block: 1rem;
+  padding-left: 1.5rem;
+  line-height: 2.5rem;
+
+  font: normal 500 2rem var(--title-font);
+}
+
+/*---------------------- GRID STRUCTURE -----------------------*/
+
+.structure {
+  display: grid;
+  grid-template-columns: 22rem repeat(2, auto-fit);
+  grid-template-areas:
+  "slaca header header"
+  "slaca content content"
+  "slaca footer footer";
+}
+
+.slaca {
+  grid-area: slaca;
+}
+
+.header {
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 /*---------------------- NAVIGATION -----------------------*/
 
-nav#slaca {
+nav.slaca {
   box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, 0.25);
 
   display: flex;
@@ -77,11 +116,11 @@ nav#slaca {
   height: 100%;
 }
 
-nav div#main-title {
+nav div.main-title {
   text-align: center;
 }
 
-nav div #title {
+nav div .title {
   background-image: var(--main-title-background);
   color: #fff;
 
@@ -133,12 +172,10 @@ div#navigation #navbar li .slaca-links:hover {
 
 /*----------------------- HEADER ------------------------*/
 
-header#header {
+header.header {
   background-color: hsl(20, 82%, 96%);
 
   max-height: 7.5rem;
-  width: 114.6rem;
-  margin-left: 22rem;
   padding-block: 1rem;
   padding-left: 3.6rem;
 
@@ -149,39 +186,35 @@ header#header {
 
   font-family: var(--title-font);
   color: var(--nav-color);
-
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
-header#header #header-title {
+header.header .header-title {
   display: flex;
   flex-direction: column;
 
   font-family: var(--nav-color);
 }
 
-header#header #header-title h4 {
+header.header .header-title h4 {
   line-height: 1.6rem;
   font-size: 1.4rem;
 }
 
-header#header #header-title h3 {
+header.header .header-title h3 {
   line-height: 2.6rem;
   font-size: 2.2rem;
 }
 
-header#header #header-title p {
+header.header .header-title p {
   line-height: 1.6rem;
   font-size: 1.4rem;
 }
 
-header#header #language-button {
+header.header .language-button {
   border: 0.1rem solid hsl(0, 0%, 80%);
 }
 
-header#header #language-button #languages {
+header.header .language-button #languages {
   background: none;
   background: url('../assets/images/lang-icon.png') no-repeat left center;
   padding: 0.5rem 0.5rem 0.5rem 2.2rem;
@@ -193,32 +226,42 @@ header#header #language-button #languages {
   transition: 0.2s;
 }
 
-header#header #language-button #languages:hover {
+header.header .language-button #languages:hover {
   background-color: hsl(20, 82%, 94%);
 }
 
-header#header #language-button #languages:focus {
+header.header .language-button #languages:focus {
   outline: none;
 }
 
-header#header #login {
+header.header .login {
   color: #333333;
   font-family: var(--paragraph-font);
 }
 
-header#header #login h4 {
+header.header .login h4 {
   font-size: 1.4rem;
   font-weight: 400;
   text-align: right;
   line-height: 1.7rem;
 }
 
-header#header #login p {
+header.header .login p {
   font-size: 1.2rem;
   line-height: 1.5rem;
 }
 
-header#header #login-img {
+header.header .login-img {
   width: 4.8rem;
   height: 4.7rem;
+}
+
+/*----------------------- CONTENT ------------------------*/
+
+.content-video h2 {
+  color: var(--secondary-title-color);
+
+  font: normal 900 2rem var(--title-font);
+  line-height: 2.5rem;
+  letter-spacing: 0.05rem;
 }
