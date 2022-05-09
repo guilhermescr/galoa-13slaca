@@ -80,6 +80,14 @@ ul {
   color: var(--subtitle-color);
 }
 
+.video-text-settings {
+  font-family: var(--title-font);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 2.5rem;
+  letter-spacing: 0.15rem;
+}
+
 /*---------------------- GRID STRUCTURE -----------------------*/
 
 .structure {
@@ -303,19 +311,56 @@ header.header .login-img-box #login-img {
   max-height: 44rem;
   position: relative;
   cursor: pointer;
-  
-}
-
-.main-content-video h2,
-.main-content-video h3,
-.main-content-video p,
-.main-content-video #video-watermark {
-  position: absolute;
 }
 
 .content .content-1 .main-content .main-content-video #video-demo {
   position: relative;
   z-index: -1;
+}
+
+.content .content-1 .main-content .main-content-video .video-overlay-box {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+
+.video-overlay-box h2,
+.video-overlay-box h3,
+.video-overlay-box p {
+  color: #fff;
+}
+
+.content .content-1 .main-content .main-content-video .video-overlay-box h2 {
+  font-size: 2.3rem;
+  margin-bottom: 19rem;
+}
+
+.watermark-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.wmk-sub-box {
+  border-radius: 50%;
+  padding-top: 0.3rem;
+  padding-inline: 0.3rem;
+  border: 0.1rem solid var(--secondary-title-color);
+}
+
+.content .content-1 .main-content .main-content-video .video-overlay-box .watermark-box .wmk-sub-box #video-watermark {
+  border-radius: 50%;
+  height: 7.8rem;
+}
+
+.content .content-1 .main-content .main-content-video .video-overlay-box .watermark-box .video-owner h3 {
+  font-size: 3.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.content .content-1 .main-content .main-content-video .video-overlay-box .watermark-box .video-owner p {
+  font-size: 2rem;
 }
 
 /*----------------------- ASIDE ------------------------*/
@@ -407,6 +452,19 @@ header.header .login-img-box #login-img {
 
 .summary {
   margin-block: 3rem;
+}
+
+.summary .summary-content p {
+  font: normal 400 1.4rem var(--paragraph-font);
+  color: #5C5C5C;
+
+  line-height: 2.3rem;
+  letter-spacing: 0.02rem;
+  padding: 1.5rem;
+}
+
+.summary .summary-content strong {
+  color: var(--secondary-title-color);
 }
 
 /*----------------------- FOOTER ------------------------*/
