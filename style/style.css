@@ -57,10 +57,6 @@ body {
   overflow: overlay;
 }
 
-img {
-  max-width: 100%;
-}
-
 ul {
   list-style: none;
 }
@@ -68,13 +64,20 @@ ul {
 .subtitles {
   background-color: hsl(20, 82%, 96%);
   color: var(--subtitle-color);
-  border: 0.1rem solid hsl(0, 0%, 93%); /* 1px = 0.1rem */
 
   padding-block: 1rem;
-  padding-left: 1.5rem;
+  padding-inline: 1.5rem;
   line-height: 2.5rem;
 
   font: normal 500 2rem var(--title-font);
+}
+
+.border {
+  border: 0.1rem solid hsl(0, 0%, 93%); /* 1px = 0.1rem */
+}
+
+.bold {
+  color: var(--subtitle-color);
 }
 
 /*---------------------- GRID STRUCTURE -----------------------*/
@@ -112,7 +115,7 @@ nav.slaca {
   display: flex;
   flex-direction: column;
 
-  max-width: 22rem;
+  width: 22rem;
   height: 100%;
 }
 
@@ -134,6 +137,10 @@ nav div .title {
 div#logo {
   max-width: 22rem;
   text-align: center;
+}
+
+div#logo #logo-img {
+  max-width: 100%;
 }
 
 div#navigation #navbar li {
@@ -182,7 +189,7 @@ header.header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
 
   font-family: var(--title-font);
   color: var(--nav-color);
@@ -251,17 +258,159 @@ header.header .login p {
   line-height: 1.5rem;
 }
 
-header.header .login-img {
+header.header .login-img-box {
   width: 4.8rem;
   height: 4.7rem;
 }
 
+header.header .login-img-box #login-img {
+  height: 5rem;
+}
+
 /*----------------------- CONTENT ------------------------*/
 
-.content-video h2 {
+.content {
+  padding: 2rem 4rem 5rem 4.5rem;
+}
+
+.content-1 {
+  display: grid;
+  grid-template-columns: 78.6rem 27.2rem;
+  grid-template-areas:
+  "main-content aside";
+}
+
+.content .content-1 .main-content {
+  max-width: 78.6rem;
+}
+
+.content .content-1 .main-content .main-content-title-box h2 {
   color: var(--secondary-title-color);
 
   font: normal 900 2rem var(--title-font);
   line-height: 2.5rem;
   letter-spacing: 0.05rem;
+
+  margin-bottom: 1.9rem;
+  max-width: 78.6rem;
+}
+
+.content .content-1 .main-content .main-content-video {
+  background: url('../assets/images/vídeo-overlay.png') no-repeat center;
+  background-size: cover;
+
+  max-width: 78.3rem;
+  max-height: 44rem;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.main-content-video h2,
+.main-content-video h3,
+.main-content-video p,
+.main-content-video #video-watermark {
+  position: absolute;
+}
+
+.content .content-1 .main-content .main-content-video #video-demo {
+  position: relative;
+  z-index: -1;
+}
+
+/*----------------------- ASIDE ------------------------*/
+
+.aside {
+  max-width: 24.2rem;
+  margin-left: 3.1rem;
+}
+
+.aside .aside-info .btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 1.2rem;
+}
+
+.aside .aside-info .btns button {
+  background-color: var(--secondary-title-color);
+  border-radius: 0.4rem;
+  color: #fff;
+
+  height: 3.1rem;
+  padding: 0.6rem 1.2rem;
+
+  cursor: pointer;
+}
+
+.aside .aside-info .btns .download-span {
+  font-size: 1.6rem;
+}
+
+.aside .aside-info .btns .download-span::before {
+  content: '\00a0';
+}
+
+.aside .aside-info .quote h4 {
+  color: var(--secondary-title-color);
+  font: normal 500 1.5rem var(--title-font);
+  text-align: right;
+}
+
+/*----------------------- DETAILS ------------------------*/
+
+.aside .details {
+  margin-top: 1rem;
+  height: 43.9rem;
+}
+
+.aside .details .details-title h3 {
+  border-bottom: 0.1rem solid hsl(0, 0%, 93%);
+}
+
+.aside .details .details-info {
+  font-family: var(--paragraph-font);
+  font-size: 1.3rem;
+
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aside .details .details-info .detail-type-thematic-keywords {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aside .details .details-info .authors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.aside .details .details-info .universities {
+  font-size: 1.2rem;
+}
+
+.aside .details .details-info .universities ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+/*----------------------- SUMMARY ------------------------*/
+
+.summary {
+  margin-block: 3rem;
+}
+
+/*----------------------- FOOTER ------------------------*/
+
+.footer {
+  padding: 0 4.6rem 0 1.4rem;
 }
