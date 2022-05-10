@@ -98,9 +98,9 @@ ul {
   display: grid;
   grid-template-columns: 22rem repeat(2, auto-fit);
   grid-template-areas:
-  "slaca header header"
-  "slaca content content"
-  "slaca footer footer";
+    'slaca header header'
+    'slaca content content'
+    'slaca footer footer';
 
   max-width: 100%;
 }
@@ -157,6 +157,10 @@ div#logo #logo-img {
   max-width: 100%;
 }
 
+div#logo {
+  margin: 0 auto;
+}
+
 div#navigation #navbar li {
   border-bottom: 0.2rem solid hsl(0, 0%, 91%);
 
@@ -196,13 +200,14 @@ div#navigation #navbar li .slaca-links:hover {
 header.header {
   background-color: hsl(20, 82%, 96%);
 
-  max-height: 7.5rem;
-  max-width: 100%;
+  max-height: fit-content;
+  width: 82.8vw;
   padding-block: 1rem;
   padding-left: 3.6rem;
 
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 3rem;
 
@@ -219,17 +224,17 @@ header.header .header-title {
 
 header.header .header-title h4 {
   line-height: 1.6rem;
-  font-size: 1.05vw;
+  font-size: 1.4rem;
 }
 
 header.header .header-title h3 {
   line-height: 2.6rem;
-  font-size: 1.62vw;
+  font-size: 2.2rem;
 }
 
 header.header .header-title p {
   line-height: 1.6rem;
-  font-size: 1.3vw;
+  font-size: 1.4rem;
 }
 
 header.header .language-button {
@@ -274,7 +279,6 @@ header.header .login p {
 }
 
 header.header .login-img-box {
-  width: 4.8rem;
   height: 4.7rem;
 }
 
@@ -285,17 +289,17 @@ header.header .login-img-box #login-img {
 /*----------------------- CONTENT ------------------------*/
 
 .content {
+  margin: 0 auto;
   padding: 2rem 4rem 5rem 3.5rem;
-  max-width: 106.1rem;
 }
 
 .content-1 {
   display: grid;
-  grid-template-columns: 78.6rem 27.2rem;
-  grid-template-areas:
-  "main-content aside";
+  grid-template-columns: 78.6rem 26rem;
+  grid-template-areas: 'main-content aside';
 
   gap: 3.1rem;
+  max-width: 80rem;
 }
 
 .content .content-1 .main-content {
@@ -359,17 +363,38 @@ header.header .login-img-box #login-img {
   border: 0.1rem solid var(--secondary-title-color);
 }
 
-.content .content-1 .main-content .main-content-video .video-overlay-box .watermark-box .wmk-sub-box #video-watermark {
+.content
+  .content-1
+  .main-content
+  .main-content-video
+  .video-overlay-box
+  .watermark-box
+  .wmk-sub-box
+  #video-watermark {
   border-radius: 50%;
   height: 7.8rem;
 }
 
-.content .content-1 .main-content .main-content-video .video-overlay-box .watermark-box .video-owner h3 {
+.content
+  .content-1
+  .main-content
+  .main-content-video
+  .video-overlay-box
+  .watermark-box
+  .video-owner
+  h3 {
   font-size: 3.4rem;
   margin-bottom: 0.5rem;
 }
 
-.content .content-1 .main-content .main-content-video .video-overlay-box .watermark-box .video-owner p {
+.content
+  .content-1
+  .main-content
+  .main-content-video
+  .video-overlay-box
+  .watermark-box
+  .video-owner
+  p {
   font-size: 2rem;
 }
 
@@ -417,7 +442,7 @@ header.header .login-img-box #login-img {
 
 .aside .details {
   margin-top: 1rem;
-  height: 43.9rem;
+  height: fit-content;
   position: relative;
 }
 
@@ -466,13 +491,18 @@ header.header .login-img-box #login-img {
 
 /*----------------------- SUMMARY ------------------------*/
 
+.content-2 {
+  max-width: 105.8rem;
+}
+
 .summary {
   margin-block: 3rem;
+  max-width: 77vw;
 }
 
 .summary .summary-content p {
   font: normal 400 1.4rem var(--paragraph-font);
-  color: #5C5C5C;
+  color: #5c5c5c;
 
   line-height: 2.3rem;
   letter-spacing: 0.02rem;
@@ -487,6 +517,7 @@ header.header .login-img-box #login-img {
 
 .discussions {
   max-height: fit-content;
+  max-width: 77vw;
 }
 
 .discussions .topics,
@@ -514,7 +545,7 @@ header.header .login-img-box #login-img {
 
 .discussions .topics .topics-generic-text {
   font: normal 400 1.4rem var(--paragraph-font);
-  color: #5C5C5C;
+  color: #5c5c5c;
 
   max-width: 64rem;
   line-height: 2.3rem;
@@ -523,9 +554,10 @@ header.header .login-img-box #login-img {
 }
 
 .discussions .topics .new-topic-box button {
-  background-image: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+  background-image: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
   border-radius: 0.4rem;
-  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.12), 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.24);
+  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.12),
+    0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.24);
 
   display: flex;
   flex-direction: row;
@@ -548,10 +580,17 @@ header.header .login-img-box #login-img {
 hr.divider {
   border: 0.1rem solid hsl(0, 0%, 91%);
   margin: 0 auto;
-  max-width: 95rem;
+  max-width: 102rem;
 }
 
 /*----------------------- DISCUSSIONS [QUESTIONS] ------------------------*/
+
+.discussions .questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+}
 
 .discussions .questions .question {
   box-shadow: 0rem 0rem 0.8rem rgba(0, 0, 0, 0.12);
@@ -559,17 +598,12 @@ hr.divider {
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 
-  max-width: 102.8rem;
+  max-width: 98rem;
   height: 14.8rem;
   padding: 1.7rem 2.4rem;
-}
-
-.discussions .questions {
-  display: flex;
-  flex-direction: column;
-  gap: 1.7rem;
 }
 
 .discussions .questions .question .question-header h3 {
@@ -580,13 +614,13 @@ hr.divider {
 
 .discussions .questions .question .question-header p {
   font: normal 500 1.2rem var(--paragraph-font);
-  color: #5C5C5C;
+  color: #5c5c5c;
   line-height: 1.5rem;
 }
 
 .discussions .questions .question .question-content p {
   font: normal 400 1.4rem var(--paragraph-font);
-  color: #4D4D4D;
+  color: #4d4d4d;
   line-height: 1.8rem;
 }
 
@@ -611,4 +645,131 @@ hr.divider {
 
 .footer img {
   max-width: 100%;
+}
+
+/*----------------------- MEDIA QUERIES ------------------------*/
+
+@media (max-width: 1324px) {
+  /* navigation */
+  nav div .title {
+    font-size: 2.5rem;
+  }
+
+  /* header */
+  header.header .header-title h3 {
+    font-size: 1.8rem;
+  }
+
+  header.header .header-title h4 {
+    font-size: 1.3rem;
+  }
+
+  /* main-content */
+  .content-1 {
+    grid-template-columns: 70rem max-content;
+    gap: 6rem;
+  }
+
+  .content .content-1 .main-content .main-content-video {
+    width: 71.5rem;
+    height: 40rem;
+  }
+
+  .content .content-1 .main-content .main-content-video #video-demo {
+    height: 40rem;
+  }
+
+  .content .content-1 .main-content .main-content-video .video-overlay-box {
+    top: 7%;
+  }
+
+  .content .content-1 .main-content .main-content-video .video-overlay-box h2 {
+    font-size: 2rem;
+  }
+
+  .content
+    .content-1
+    .main-content
+    .main-content-video
+    .video-overlay-box
+    .watermark-box
+    .video-owner
+    h3 {
+    font-size: 2.4rem;
+  }
+
+  .content
+    .content-1
+    .main-content
+    .main-content-video
+    .video-overlay-box
+    .watermark-box
+    .video-owner
+    p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 1262px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .content-1 {
+    display: grid;
+    grid-template-areas: 'main-content aside';
+
+    gap: 3.1rem;
+  }
+
+  .discussions .questions {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .content-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 105.8rem;
+    margin: 0 auto;
+    padding-left: 4rem;
+  }
+
+  .aside {
+    width: 76.5vw;
+  }
+
+  .aside .aside-info {
+    width: 76.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .details {
+    width: 76.5vw;
+  }
+
+  .aside .details .details-info .details-scrollbar {
+    top: 15%;
+    right: 1%;
+    height: 30rem;
+  }
+
+  .aside .details .details-info .details-scrollbar img {
+    height: 30rem;
+  }
+
+  .content-2 {
+    margin: 0 auto;
+  }
+
+  .summary, .discussions {
+    margin: 3rem auto;
+  }
 }
