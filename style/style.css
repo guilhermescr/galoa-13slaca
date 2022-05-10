@@ -32,7 +32,7 @@
 
   --main-title-background: linear-gradient(
     180deg,
-    hsl(33, 100%, 66%),
+    hsl(33, 99%, 66%),
     hsl(21, 84%, 58%)
   );
   --secondary-title-color: hsl(21, 83%, 58%);
@@ -72,8 +72,12 @@ ul {
   font: normal 500 2rem var(--title-font);
 }
 
+.box-border {
+  border: 0.1rem solid hsl(0, 0%, 93%);
+}
+
 .border {
-  border: 0.1rem solid hsl(0, 0%, 93%); /* 1px = 0.1rem */
+  border-bottom: 0.1rem solid hsl(0, 0%, 93%); /* 1px = 0.1rem */
 }
 
 .bold {
@@ -97,6 +101,8 @@ ul {
   "slaca header header"
   "slaca content content"
   "slaca footer footer";
+
+  max-width: 100%;
 }
 
 .slaca {
@@ -123,7 +129,7 @@ nav.slaca {
   display: flex;
   flex-direction: column;
 
-  width: 22rem;
+  width: 16vw;
   height: 100%;
 }
 
@@ -191,6 +197,7 @@ header.header {
   background-color: hsl(20, 82%, 96%);
 
   max-height: 7.5rem;
+  max-width: 100%;
   padding-block: 1rem;
   padding-left: 3.6rem;
 
@@ -212,17 +219,17 @@ header.header .header-title {
 
 header.header .header-title h4 {
   line-height: 1.6rem;
-  font-size: 1.4rem;
+  font-size: 1.05vw;
 }
 
 header.header .header-title h3 {
   line-height: 2.6rem;
-  font-size: 2.2rem;
+  font-size: 1.62vw;
 }
 
 header.header .header-title p {
   line-height: 1.6rem;
-  font-size: 1.4rem;
+  font-size: 1.3vw;
 }
 
 header.header .language-button {
@@ -278,7 +285,8 @@ header.header .login-img-box #login-img {
 /*----------------------- CONTENT ------------------------*/
 
 .content {
-  padding: 2rem 4rem 5rem 4.5rem;
+  padding: 2rem 4rem 5rem 3.5rem;
+  max-width: 106.1rem;
 }
 
 .content-1 {
@@ -286,6 +294,8 @@ header.header .login-img-box #login-img {
   grid-template-columns: 78.6rem 27.2rem;
   grid-template-areas:
   "main-content aside";
+
+  gap: 3.1rem;
 }
 
 .content .content-1 .main-content {
@@ -308,7 +318,7 @@ header.header .login-img-box #login-img {
   background-size: cover;
 
   max-width: 78.3rem;
-  max-height: 44rem;
+  max-height: 43.9rem;
   position: relative;
   cursor: pointer;
 }
@@ -320,8 +330,8 @@ header.header .login-img-box #login-img {
 
 .content .content-1 .main-content .main-content-video .video-overlay-box {
   position: absolute;
-  top: 10%;
-  left: 5%;
+  top: 8%;
+  left: 4%;
 }
 
 .video-overlay-box h2,
@@ -367,7 +377,6 @@ header.header .login-img-box #login-img {
 
 .aside {
   max-width: 24.2rem;
-  margin-left: 3.1rem;
 }
 
 .aside .aside-info .btns {
@@ -409,6 +418,7 @@ header.header .login-img-box #login-img {
 .aside .details {
   margin-top: 1rem;
   height: 43.9rem;
+  position: relative;
 }
 
 .aside .details .details-title h3 {
@@ -448,6 +458,12 @@ header.header .login-img-box #login-img {
   gap: 0.1rem;
 }
 
+.aside .details .details-info .details-scrollbar {
+  position: absolute;
+  top: 13%;
+  right: 2%;
+}
+
 /*----------------------- SUMMARY ------------------------*/
 
 .summary {
@@ -467,8 +483,132 @@ header.header .login-img-box #login-img {
   color: var(--secondary-title-color);
 }
 
+/*----------------------- DISCUSSIONS [TOPICS] ------------------------*/
+
+.discussions {
+  max-height: fit-content;
+}
+
+.discussions .topics,
+.discussions .questions {
+  padding: 1.7rem 1.5rem;
+}
+
+.discussions .topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.discussions .topics .topics-subtitle h4 {
+  font: normal 700 1.8rem var(--title-font);
+  color: var(--secondary-title-color);
+}
+
+.discussions .topics .topics-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 5.2rem;
+}
+
+.discussions .topics .topics-generic-text {
+  font: normal 400 1.4rem var(--paragraph-font);
+  color: #5C5C5C;
+
+  max-width: 64rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
+
+.discussions .topics .new-topic-box button {
+  background-image: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+  border-radius: 0.4rem;
+  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.12), 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.24);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  max-width: 13.3rem;
+  height: 3.2rem;
+  padding: 0.7rem 1.3rem;
+
+  cursor: pointer;
+}
+
+.discussions .topics .new-topic-box button .new-topic-txt {
+  font: normal 700 1.5rem var(--paragraph-font);
+  color: #fff;
+}
+
+hr.divider {
+  border: 0.1rem solid hsl(0, 0%, 91%);
+  margin: 0 auto;
+  max-width: 95rem;
+}
+
+/*----------------------- DISCUSSIONS [QUESTIONS] ------------------------*/
+
+.discussions .questions .question {
+  box-shadow: 0rem 0rem 0.8rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 102.8rem;
+  height: 14.8rem;
+  padding: 1.7rem 2.4rem;
+}
+
+.discussions .questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.discussions .questions .question .question-header h3 {
+  font: normal 700 1.6rem var(--paragraph-font);
+  color: var(--secondary-title-color);
+  line-height: 2rem;
+}
+
+.discussions .questions .question .question-header p {
+  font: normal 500 1.2rem var(--paragraph-font);
+  color: #5C5C5C;
+  line-height: 1.5rem;
+}
+
+.discussions .questions .question .question-content p {
+  font: normal 400 1.4rem var(--paragraph-font);
+  color: #4D4D4D;
+  line-height: 1.8rem;
+}
+
+.discussions .questions .question .question-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.discussions .questions .question .question-footer p {
+  font: normal 400 1.4rem 'Segoe UI', sans-serif;
+  color: #757575;
+  line-height: 1.9rem;
+}
+
 /*----------------------- FOOTER ------------------------*/
 
 .footer {
-  padding: 0 4.6rem 0 1.4rem;
+  margin: 0 4.6rem 0 1.4rem;
+  max-width: 110rem;
+}
+
+.footer img {
+  max-width: 100%;
 }
