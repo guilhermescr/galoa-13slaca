@@ -1035,6 +1035,14 @@ hr.divider {
     margin: 0 auto;
   }
 
+  .aside .aside-info .btns {
+    justify-content: center;
+  }
+
+  .content-1 .aside .aside-info h4 {
+    text-align: center;
+  }
+
   .aside .details .details-info {
     font-size: 1.4rem;
   }
