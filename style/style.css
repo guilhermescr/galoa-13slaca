@@ -712,7 +712,7 @@ hr.divider {
 
 @media (max-width: 1262px) {
   .content {
-    padding-left: 0;
+    padding-left: 2vw;
     padding-right: 0;
     margin: 0;
   }
@@ -740,8 +740,7 @@ hr.divider {
     justify-content: center;
 
     max-width: 105.8rem;
-    margin: 0 auto;
-    padding-left: 4rem;
+    margin: 0 3rem;
   }
 
   .aside {
@@ -815,10 +814,9 @@ hr.divider {
   }
 
   .content-1 {
-    padding-left: 4rem;
-    padding-right: 0;
+    padding: 0;
     margin: 0;
-    max-width: 30rem;
+    max-width: 105.8rem;
   }
 
   .content .content-1 .main-content .main-content-video {
@@ -831,11 +829,23 @@ hr.divider {
     height: 20rem;
   }
 
+  .aside {
+    max-width: 77vw;
+    margin: 0 auto;
+  }
+
   .aside .aside-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .aside .details .details-info {
+    font-size: 1.4rem;
+  }
+  .aside .details .details-info .universities {
+    font-size: 1.4rem;
   }
 
   .summary .summary-content p {
@@ -845,9 +855,5 @@ hr.divider {
   .footer {
     margin: 0;
     width: 100%;
-  }
-  
-  .footer img {
-    max-width: 100%;
   }
 }
