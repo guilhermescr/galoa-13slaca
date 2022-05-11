@@ -592,7 +592,7 @@ hr.divider {
   flex-direction: column;
   align-items: center;
 
-  padding-bottom: 0;
+  padding: 0;
 }
 
 .discussions .questions .question {
@@ -605,6 +605,7 @@ hr.divider {
 
   max-width: 98rem;
   height: fit-content;
+  margin-top: 1.5rem;
   padding: 1.7rem 2.4rem;
 }
 
@@ -629,6 +630,11 @@ hr.divider {
   font: normal 500 1.2rem var(--paragraph-font);
   color: #5c5c5c;
   line-height: 1.5rem;
+}
+
+.question .question-header p {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
 }
 
 .discussions .questions .question .question-content p,
@@ -657,29 +663,32 @@ hr.divider {
 .opened-topic-card {
   box-shadow: 0rem 0rem 0.8rem rgb(0 0 0 / 12%);
   max-width: 98rem;
-  margin: auto;
-}
-
-.answers {
-  margin: auto;
+  margin: 1.5rem auto;
   padding: 0;
-  max-width: 98rem;
 }
 
 .opened-topic-card .question {
   border-radius: 0.4rem;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   max-width: 98rem;
   height: fit-content;
+  margin: 0;
   padding: 1.7rem 2.4rem;
-  margin: 1.7rem auto 0 auto;
 }
 
-.answers #ana-ans {
-  border-radius: 0 0 0.4rem 0.4rem;
+.opened-topic-card .question-header p {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  margin: 0;
+  padding: 0;
+  max-width: 98rem;
 }
 
 .owner-ans,
@@ -687,20 +696,74 @@ hr.divider {
   background-color: #f8f8f8;
   border-block: 0.1rem solid hsl(0, 0%, 91%);
 
-  margin: 0 auto;
-  padding: 4rem 2.3rem;
+  margin: 0;
+  padding: 1.8rem 2.3rem 3.6rem 2.3rem;
   max-height: fit-content;
 }
 
-.question .owner-header h3,
-.question .ans-header h3 {
+.answers .owner-ans h3,
+.answers .random-ans h3 {
   font: normal 700 1.2rem var(--paragraph-font);
   color: #5c5c5c;
+
+  margin-bottom: 1rem;
   line-height: 1.5rem;
 }
 
-/* .question .owner-content, 
-.question .ans-content {} */
+.answers .owner-content,
+.answers .ans-content {
+  color: #4d4d4d;
+  font: normal 400 1.4rem var(--paragraph-font);
+
+  width: 98.1rem;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.answers #ans-1 {
+  position: relative;
+}
+
+.answers div#ans-2 {
+  background-color: #fff;
+  padding-bottom: 1.8rem;
+  
+  position: relative;
+}
+
+.answers #ans-3 {
+  position: relative;
+}
+
+.answers #ans-4 {
+  border-radius: 0 0 0.4rem 0.4rem;
+
+  position: relative;
+}
+
+.co-and-author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+  top: 1.5rem;
+  right: 2.3rem;
+}
+
+#ans-1 .co-and-author {
+  gap: 3.3rem;
+}
+
+#ans-3 .co-and-author, #ans-4 .co-and-author {
+  gap: 1.3rem;
+}
+
+.co-and-author p {
+  font: normal 700 1.4rem var(--paragraph-font);
+  color: var(--secondary-title-color);
+  line-height: 1.75rem;
+}
 
 /*----------------------- FOOTER ------------------------*/
 
@@ -791,7 +854,12 @@ hr.divider {
   }
 
   .discussions .questions {
-    margin: 0 auto;
+    margin: 0;
+  }
+
+  .answers .owner-content,
+  .answers .ans-content {
+    max-width: fit-content;
   }
 }
 
