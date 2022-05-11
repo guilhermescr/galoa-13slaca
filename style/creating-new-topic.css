@@ -530,53 +530,96 @@ header.header .login-img-box #login-img {
 .discussions .topics {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 3.2rem;
 }
 
 .discussions .topics .topics-subtitle h4 {
-  font: normal 700 1.8rem var(--title-font);
-  color: var(--secondary-title-color);
-}
-
-.discussions .topics .topics-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 5.2rem;
-}
-
-.discussions .topics .topics-generic-text {
   font: normal 400 1.4rem var(--paragraph-font);
   color: #5c5c5c;
 
-  max-width: 64rem;
-  line-height: 2.3rem;
-  letter-spacing: 0.02rem;
+  margin-top: 1.5rem;
+  line-height: 1.8rem;
   text-align: center;
 }
 
-.discussions .topics .new-topic-box button {
+.topics-form-box .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.topics-form-box .form label {
+  color: var(--secondary-title-color);
+  font: normal 700 1.6rem var(--title-font);
+  line-height: 1.8rem;
+}
+
+.topics-form-box .form input {
+  margin-block: 0.4rem;
+}
+
+.topics-form-box .form input#subject {
+  border: 0.1rem solid hsl(0, 0%, 80%);
+  border-radius: 0.3rem;
+  padding: 1rem 0 1rem 2.3rem;
+}
+
+.topics-form-box .form input#subject:focus {
+  outline: 0.1rem solid hsl(0, 0%, 50%);
+}
+
+.topics-form-box .form textarea {
+  border: 0.1rem solid hsl(0, 0%, 80%);
+  border-radius: 0.3rem;
+
+  margin-top: 0.4rem;
+  padding: 1rem 0 1rem 2.3rem;
+}
+
+.topics-form-box .form textarea:focus {
+  outline: 0.1rem solid hsl(0, 0%, 50%);
+  margin-bottom: 0.1rem;
+}
+
+.topics .font-settings {
+  display: flex;
+  flex-direction: row;
+}
+
+.topics .font-settings .settings-bar {
+  background: hsl(187, 24%, 93%);
+  border-inline: 0.1rem solid hsl(0, 0%, 80%);
+  border-bottom: 0.1rem solid hsl(0, 0%, 80%);
+  
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  width: 80%;
+  padding: 1rem 0 1rem 2.9rem;
+}
+
+.topics .font-settings .settings-bar svg {
+  cursor: pointer;
+}
+
+.topics .font-settings .submit-btn {
   background-image: linear-gradient(180deg, #feb254 0%, #f0813d 100%);
-  border-radius: 0.4rem;
-  box-shadow: 0rem 0rem 0.2rem rgba(0, 0, 0, 0.12),
-    0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.24);
+  border-radius: 0 0 0.4rem 0;
+  color: #fff;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
 
-  max-width: 13.3rem;
-  height: 3.2rem;
-  padding: 0.7rem 1.3rem;
+  width: 20%;
+  height: 3.1rem;
+  line-height: 1.6rem;
+  padding: 0.7rem 6.6rem;
 
-  cursor: pointer;
-}
-
-.discussions .topics .new-topic-box button .new-topic-txt {
   font: normal 700 1.5rem var(--paragraph-font);
-  color: #fff;
+  text-align: center;
+  cursor: pointer;
 }
 
 hr.divider {
@@ -591,8 +634,7 @@ hr.divider {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 0;
+  gap: 1.7rem;
 }
 
 .discussions .questions .question {
@@ -602,167 +644,41 @@ hr.divider {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 
   max-width: 98rem;
   height: fit-content;
-  margin-top: 1.5rem;
   padding: 1.7rem 2.4rem;
 }
 
-.opened-topic-card .question {
-  margin-top: 1.7rem;
-}
-
-.questions .question .question-content p,
-.opened-topic-card .question .question-content p {
-  margin-bottom: 2.8rem;
-}
-
-.discussions .questions .question .question-header h3,
-.opened-topic-card .question .question-header h3 {
+.discussions .questions .question .question-header h3 {
   font: normal 700 1.6rem var(--paragraph-font);
   color: var(--secondary-title-color);
   line-height: 2rem;
 }
 
-.discussions .questions .question .question-header p,
-.opened-topic-card .question .question-header p {
+.discussions .questions .question .question-header p {
   font: normal 500 1.2rem var(--paragraph-font);
   color: #5c5c5c;
   line-height: 1.5rem;
 }
 
-.question .question-header p {
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.discussions .questions .question .question-content p,
-.opened-topic-card .question .question-content p {
+.discussions .questions .question .question-content p {
   font: normal 400 1.4rem var(--paragraph-font);
   color: #4d4d4d;
   line-height: 1.8rem;
 }
 
-.discussions .questions .question .question-footer,
-.opened-topic-card .question .question-footer {
+.discussions .questions .question .question-footer {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
 }
 
-.discussions .questions .question .question-footer p,
-.opened-topic-card .question .question-footer p {
+.discussions .questions .question .question-footer p {
   font: normal 400 1.4rem 'Segoe UI', sans-serif;
   color: #757575;
   line-height: 1.9rem;
-}
-
-/*----------------------- DISCUSSIONS [ANSWERS] ------------------------*/
-
-.opened-topic-card {
-  box-shadow: 0rem 0rem 0.8rem rgb(0 0 0 / 12%);
-  max-width: 98rem;
-  margin: 1.5rem auto;
-  padding: 0;
-}
-
-.opened-topic-card .question {
-  border-radius: 0.4rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  max-width: 98rem;
-  height: fit-content;
-  margin: 0;
-  padding: 1.7rem 2.4rem;
-}
-
-.opened-topic-card .question-header p {
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.answers {
-  margin: 0;
-  padding: 0;
-  max-width: 98rem;
-}
-
-.owner-ans,
-.random-ans {
-  background-color: #f8f8f8;
-  border-block: 0.1rem solid hsl(0, 0%, 91%);
-
-  margin: 0;
-  padding: 1.8rem 2.3rem 3.6rem 2.3rem;
-  max-height: fit-content;
-}
-
-.answers .owner-ans h3,
-.answers .random-ans h3 {
-  font: normal 700 1.2rem var(--paragraph-font);
-  color: #5c5c5c;
-
-  margin-bottom: 1rem;
-  line-height: 1.5rem;
-}
-
-.answers .owner-content,
-.answers .ans-content {
-  color: #4d4d4d;
-  font: normal 400 1.4rem var(--paragraph-font);
-
-  width: 98.1rem;
-  line-height: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.answers #ans-1 {
-  position: relative;
-}
-
-.answers div#ans-2 {
-  background-color: #fff;
-  padding-bottom: 1.8rem;
-  
-  position: relative;
-}
-
-.answers #ans-3 {
-  position: relative;
-}
-
-.answers #ans-4 {
-  border-radius: 0 0 0.4rem 0.4rem;
-
-  position: relative;
-}
-
-.co-and-author {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  position: absolute;
-  top: 1.5rem;
-  right: 2.3rem;
-}
-
-#ans-1 .co-and-author {
-  gap: 3.3rem;
-}
-
-#ans-3 .co-and-author, #ans-4 .co-and-author {
-  gap: 1.3rem;
-}
-
-.co-and-author p {
-  font: normal 700 1.4rem var(--paragraph-font);
-  color: var(--secondary-title-color);
-  line-height: 1.75rem;
 }
 
 /*----------------------- FOOTER ------------------------*/
@@ -854,12 +770,7 @@ hr.divider {
   }
 
   .discussions .questions {
-    margin: 0;
-  }
-
-  .answers .owner-content,
-  .answers .ans-content {
-    max-width: fit-content;
+    margin: 0 auto;
   }
 }
 
