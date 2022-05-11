@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="../style/expanded-topic-card.css" />
     <link
       rel="shortcut icon"
-      href="assets/images/favicon.ico"
+      href="../assets/images/favicon.ico"
       type="image/x-icon"
     />
     <title>Chuva - Exercício Frontend</title>
@@ -21,7 +21,7 @@
         <div id="logo">
           <img
             id="logo-img"
-            src="assets/images/slaca-logo.png"
+            src="../assets/images/slaca-logo.png"
             alt="Logo com uma laranja da 13 SLACA"
           />
         </div>
@@ -74,7 +74,7 @@
         <div class="login-img-box">
           <img
             id="login-img"
-            src="assets/images/woman-login.png"
+            src="../assets/images/woman-login.png"
             alt="A smiley woman's face"
           />
         </div>
@@ -92,7 +92,7 @@
             <div class="main-content-video">
               <img
                 id="video-demo"
-                src="assets/images/video-demo.png"
+                src="../assets/images/video-demo.png"
                 alt="Video's Structure Model"
               />
               <div class="video-overlay-box">
@@ -104,7 +104,7 @@
                   <div class="wmk-sub-box">
                     <img
                       id="video-watermark"
-                      src="assets/images/watermark.png"
+                      src="../assets/images/watermark.png"
                       alt="Video's Watermark"
                     />
                   </div>
@@ -228,7 +228,7 @@
                   </ul>
                 </div>
                 <span class="details-scrollbar"
-                  ><img src="assets/images/scroll.png" alt="Scrollbar image"
+                  ><img src="../assets/images/scroll.png" alt="Scrollbar image"
                 /></span>
               </div>
             </div>
@@ -254,7 +254,11 @@
                 metus. Quisque sollicitudin ligula in sapien scelerisque, ac
                 gravida eros vestibulum. Etiam aliquam dictum nisl, vel aliquet
                 enim accumsan sit ametl accumsant...
-                <strong class="read-more">ver mais</strong>
+                <strong class="read-more"
+                  ><a href="expanded-summary.html" target="_self" rel="next"
+                    >ver mais</a
+                  ></strong
+                >
               </p>
             </div>
           </article>
@@ -268,15 +272,15 @@
               </div>
               <div class="topics-icons">
                 <img
-                  src="assets/images/plant-icon.png"
+                  src="../assets/images/plant-icon.png"
                   alt="A hand with a sapling"
                 />
                 <img
-                  src="assets/images/q&a-icon.png"
+                  src="../assets/images/q&a-icon.png"
                   alt="Two balloons: One with letter Q and the other with letter A"
                 />
                 <img
-                  src="assets/images/people-icon.png"
+                  src="../assets/images/people-icon.png"
                   alt="Two people with a light bulb"
                 />
               </div>
@@ -314,7 +318,7 @@
                 </button>
               </div>
             </div>
-            <hr class="divider">
+            <hr class="divider" />
             <div class="questions">
               <div class="question">
                 <div class="question-header">
@@ -330,15 +334,20 @@
                   </p>
                 </div>
                 <div class="question-footer">
-                  <img src="assets/images/more-info.png" alt="More info icon" />
                   <img
-                    src="assets/images/favorite-topic-icon.png"
+                    src="../assets/images/more-info.png"
+                    alt="More info icon"
+                  />
+                  <img
+                    src="../assets/images/favorite-topic-icon.png"
                     alt="Favorite topic icon"
                   />
                   <p>1 like</p>
                   <p>1 resposta</p>
                 </div>
               </div>
+            </div>
+            <div class="opened-topic-card">
               <div class="question">
                 <div class="question-header">
                   <h3>Assunto da pergunta aparece aqui</h3>
@@ -349,17 +358,82 @@
                     Comecinho da pergunta aparece aqui resente relato
                     inscreve-se no campo da análise da dimensão e impacto de
                     processo formativo situado impacto de processo formativo
-                    processo...
+                    processo resente relato inscreve-se no campo da análise da
+                    dimensão e impacto de processo formativo situado impacto de
+                    processo formativo processo?
                   </p>
                 </div>
                 <div class="question-footer">
-                  <img src="assets/images/more-info.png" alt="More info icon" />
                   <img
-                    src="assets/images/favorite-topic-icon.png"
+                    src="../assets/images/more-info.png"
+                    alt="More info icon"
+                  />
+                  <img
+                    src="../assets/images/favorite-topic-icon.png"
                     alt="Favorite topic icon"
                   />
-                  <p>1 like</p>
-                  <p>1 resposta</p>
+                  <p>4 likes</p>
+                  <p>4 respostas</p>
+                </div>
+              </div>
+              <div class="answers">
+                <div class="owner-ans">
+                  <div class="owner-header">
+                    <h3>Adriano da Silva</h3>
+                    <p class="owner-content">
+                      Resposta do autor é aqui. Relato inscreve-se no campo da
+                      análise da dimensão e impacto de processo formativo
+                      situado impacto de processo formativo processo resente
+                      relato inscreve-se no campo da análise da dimensão e
+                      impacto de processo formativo situado impacto de processo
+                      formativo processo.
+                    </p>
+                  </div>
+                </div>
+                <div class="random-ans" id="highlighted-card">
+                  <div class="ans-header">
+                    <h3>Carlos Henrique Santos</h3>
+                    <p class="ans-content">
+                      Consegui entender melhor agora! Parece que a variação da
+                      análise da dimensão e impacto de processo formativo
+                      situado impacto de processo formativo.
+                    </p>
+                    <p>
+                      Obrigada pela resposta, muito interessante o seu trabalho!
+                    </p>
+                  </div>
+                </div>
+                <div class="random-ans">
+                  <div class="ans-header">
+                    <h3>Carmila Ferreira Andrade</h3>
+                    <p class="ans-content">
+                      Também ínteressante lembrar que o relato inscreve-se no
+                      campo da análise da dimensão e impacto de processo
+                      formativo situado impacto de processo formativo processo
+                      resente relato inscreve-se no campo da análise da dimensão
+                      e impacto de processo formativo situado impacto de
+                      processo formativo processo.
+                    </p>
+                    <p>
+                      Situado impacto de processo formativo processo resente
+                      relato inscreve-se no campo da análise da dimensão e
+                      impacto de processo formativo situado impacto de processo
+                      formativo processo.
+                    </p>
+                  </div>
+                </div>
+                <div class="random-ans" id="ana-ans">
+                  <div class="ans-header">
+                    <h3>Ana Carolina</h3>
+                    <p class="ans-content">
+                      Resposta do autor é aqui. Relato inscreve-se no campo da
+                      análise da dimensão e impacto de processo formativo
+                      situado impacto de processo formativo processo resente
+                      relato inscreve-se no campo da análise da dimensão e
+                      impacto de processo formativo situado impacto de processo
+                      formativo processo.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -369,8 +443,8 @@
 
       <footer class="footer">
         <img
-          src="assets/images/footer-image.png"
-          alt="Image with Galoá Proceedings' info"
+          src="../assets/images/footer-image.png"
+          alt="Image with Galoá Proceedings info"
         />
       </footer>
     </article>

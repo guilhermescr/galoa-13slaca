@@ -498,6 +498,7 @@ header.header .login-img-box #login-img {
 .summary {
   margin-block: 3rem;
   max-width: 77vw;
+  max-height: fit-content;
 }
 
 .summary .summary-content p {
@@ -509,8 +510,9 @@ header.header .login-img-box #login-img {
   padding: 1.5rem;
 }
 
-.summary .summary-content strong {
+.summary .summary-content strong a {
   color: var(--secondary-title-color);
+  max-width: max-content;
 }
 
 /*----------------------- DISCUSSIONS [TOPICS] ------------------------*/
@@ -589,7 +591,8 @@ hr.divider {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.7rem;
+
+  padding-bottom: 0;
 }
 
 .discussions .questions .question {
@@ -599,42 +602,105 @@ hr.divider {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 
   max-width: 98rem;
   height: fit-content;
   padding: 1.7rem 2.4rem;
 }
 
-.discussions .questions .question .question-header h3 {
+.opened-topic-card .question {
+  margin-top: 1.7rem;
+}
+
+.questions .question .question-content p,
+.opened-topic-card .question .question-content p {
+  margin-bottom: 2.8rem;
+}
+
+.discussions .questions .question .question-header h3,
+.opened-topic-card .question .question-header h3 {
   font: normal 700 1.6rem var(--paragraph-font);
   color: var(--secondary-title-color);
   line-height: 2rem;
 }
 
-.discussions .questions .question .question-header p {
+.discussions .questions .question .question-header p,
+.opened-topic-card .question .question-header p {
   font: normal 500 1.2rem var(--paragraph-font);
   color: #5c5c5c;
   line-height: 1.5rem;
 }
 
-.discussions .questions .question .question-content p {
+.discussions .questions .question .question-content p,
+.opened-topic-card .question .question-content p {
   font: normal 400 1.4rem var(--paragraph-font);
   color: #4d4d4d;
   line-height: 1.8rem;
 }
 
-.discussions .questions .question .question-footer {
+.discussions .questions .question .question-footer,
+.opened-topic-card .question .question-footer {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
 }
 
-.discussions .questions .question .question-footer p {
+.discussions .questions .question .question-footer p,
+.opened-topic-card .question .question-footer p {
   font: normal 400 1.4rem 'Segoe UI', sans-serif;
   color: #757575;
   line-height: 1.9rem;
 }
+
+/*----------------------- DISCUSSIONS [ANSWERS] ------------------------*/
+
+.opened-topic-card {
+  box-shadow: 0rem 0rem 0.8rem rgb(0 0 0 / 12%);
+  max-width: 98rem;
+  margin: auto;
+}
+
+.answers {
+  margin: auto;
+  padding: 0;
+  max-width: 98rem;
+}
+
+.opened-topic-card .question {
+  border-radius: 0.4rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 98rem;
+  height: fit-content;
+  padding: 1.7rem 2.4rem;
+  margin: 1.7rem auto 0 auto;
+}
+
+.answers #ana-ans {
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.owner-ans,
+.random-ans {
+  background-color: #f8f8f8;
+  border-block: 0.1rem solid hsl(0, 0%, 91%);
+
+  margin: 0 auto;
+  padding: 4rem 2.3rem;
+  max-height: fit-content;
+}
+
+.question .owner-header h3,
+.question .ans-header h3 {
+  font: normal 700 1.2rem var(--paragraph-font);
+  color: #5c5c5c;
+  line-height: 1.5rem;
+}
+
+/* .question .owner-content, 
+.question .ans-content {} */
 
 /*----------------------- FOOTER ------------------------*/
 
@@ -816,9 +882,9 @@ hr.divider {
     display: grid;
     grid-template-columns: 65vw;
     grid-template-areas:
-    'header-title header-title'
-    'language-button language-button'
-    'login login-img-box';
+      'header-title header-title'
+      'language-button language-button'
+      'login login-img-box';
 
     gap: 1rem;
     padding-left: 2rem;
@@ -833,7 +899,7 @@ hr.divider {
     font-size: 1.4rem;
     text-align: left;
   }
-  
+
   header.header .login p {
     font-size: 1.2rem;
   }
