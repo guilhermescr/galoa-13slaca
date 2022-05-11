@@ -712,7 +712,7 @@ hr.divider {
 
 @media (max-width: 1262px) {
   .content {
-    padding-left: 2vw;
+    padding-left: 1vw;
     padding-right: 0;
     margin: 0;
   }
@@ -740,7 +740,7 @@ hr.divider {
     justify-content: center;
 
     max-width: 105.8rem;
-    margin: 0 3rem;
+    margin: 0 0 0 3rem;
   }
 
   .aside {
@@ -758,6 +758,13 @@ hr.divider {
     width: 76.5vw;
   }
 
+  .aside .details .details-info {
+    font-size: 1.4rem;
+  }
+  .aside .details .details-info .universities {
+    font-size: 1.4rem;
+  }
+
   .aside .details .details-info .details-scrollbar {
     top: 15%;
     right: 1%;
@@ -772,7 +779,8 @@ hr.divider {
     margin: 0 auto;
   }
 
-  .summary, .discussions {
+  .summary,
+  .discussions {
     margin: 3rem auto;
   }
 }
@@ -788,10 +796,9 @@ hr.divider {
   }
 
   nav.slaca {
-  
     display: flex;
     flex-direction: column;
-  
+
     width: 100%;
     height: fit-content;
   }
@@ -806,11 +813,29 @@ hr.divider {
 
   /* header */
   header.header {
+    display: grid;
+    grid-template-columns: 65vw;
+    grid-template-areas:
+    'header-title header-title'
+    'language-button language-button'
+    'login login-img-box';
+
+    gap: 1rem;
+    padding-left: 2rem;
     width: 100%;
+  }
+
+  header.header .language-button {
+    width: 10rem;
+  }
+
+  header.header .login h4 {
+    font-size: 1.4rem;
+    text-align: left;
+  }
   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  header.header .login p {
+    font-size: 1.2rem;
   }
 
   .content-1 {
@@ -819,14 +844,56 @@ hr.divider {
     max-width: 105.8rem;
   }
 
+  .content .content-1 .main-content .main-content-title-box {
+    margin-bottom: 2rem;
+  }
+
+  .content .content-1 .main-content .main-content-title-box h2 {
+    text-align: center;
+    font-size: 1.8rem;
+
+    max-width: 40rem;
+    margin: auto;
+  }
+
   .content .content-1 .main-content .main-content-video {
-    width: 44rem;
-    height: 40rem;
+    width: 40rem;
+    height: 25rem;
+    margin: auto;
   }
 
   .main-content-video #video-demo {
-    width: 44rem;
-    height: 20rem;
+    max-width: 40rem;
+    max-height: 25rem;
+  }
+
+  .content .content-1 .main-content .main-content-video .video-overlay-box {
+    top: 5%;
+    left: 4%;
+  }
+  .content .content-1 .main-content .main-content-video .video-overlay-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+  }
+  .content
+    .content-1
+    .main-content
+    .main-content-video
+    .video-overlay-box
+    .watermark-box
+    .video-owner
+    h3 {
+    font-size: 1.7rem;
+  }
+  .content
+    .content-1
+    .main-content
+    .main-content-video
+    .video-overlay-box
+    .watermark-box
+    .video-owner
+    p {
+    font-size: 1.4rem;
   }
 
   .aside {
@@ -834,18 +901,19 @@ hr.divider {
     margin: 0 auto;
   }
 
-  .aside .aside-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .aside .details .details-info {
     font-size: 1.4rem;
   }
   .aside .details .details-info .universities {
     font-size: 1.4rem;
+  }
+
+  .aside .details .details-info .details-scrollbar {
+    top: 12.5%;
+  }
+
+  .aside .details .details-info .details-scrollbar img {
+    height: 34.5rem;
   }
 
   .summary .summary-content p {
