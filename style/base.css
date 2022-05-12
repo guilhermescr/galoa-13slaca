@@ -284,6 +284,7 @@ header.header .login-img-box {
 
 header.header .login-img-box #login-img {
   height: 5rem;
+  cursor: pointer;
 }
 
 /*----------------------- CONTENT ------------------------*/
@@ -424,6 +425,16 @@ header.header .login-img-box #login-img {
   cursor: pointer;
 }
 
+.aside .aside-info .btns button:hover {
+  background-color: hsl(21, 83%, 38%);
+  transition: .2s ease-in-out;
+}
+
+.aside .aside-info .btns button:active {
+  background-color: hsl(21, 83%, 68%);
+  transition: none;
+}
+
 .aside .aside-info .btns .download-span {
   font-size: 1.6rem;
 }
@@ -510,7 +521,7 @@ header.header .login-img-box #login-img {
   padding: 1.5rem;
 }
 
-.summary .summary-content strong a{
+.summary .summary-content strong a {
   color: var(--secondary-title-color);
   max-width: max-content;
 }
@@ -524,7 +535,7 @@ header.header .login-img-box #login-img {
 
 .discussions .topics,
 .discussions .questions {
-  padding: 1.7rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .discussions .topics {
@@ -572,9 +583,20 @@ header.header .login-img-box #login-img {
   padding: 0.7rem 1.3rem;
 
   cursor: pointer;
+  transform: translateY(150%);
 }
 
-.discussions .topics .new-topic-box button .new-topic-txt {
+.discussions .topics .new-topic-box button:hover {
+  background-image: linear-gradient(180deg, #df810e 0%, #f35d00 100%);
+  transition: .2s ease-in-out;
+}
+
+.discussions .topics .new-topic-box button:active {
+  background-image: linear-gradient(180deg, #ffc073 0%, #ffac79 100%);
+  transition: none;
+}
+
+.discussions .topics .new-topic-box button .new-topic-txt a {
   font: normal 700 1.5rem var(--paragraph-font);
   color: #fff;
 }
@@ -630,6 +652,10 @@ hr.divider {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+}
+
+.discussions .questions .question .question-footer img {
+  cursor: pointer;
 }
 
 .discussions .questions .question .question-footer p {
@@ -818,9 +844,9 @@ hr.divider {
     display: grid;
     grid-template-columns: 65vw;
     grid-template-areas:
-    'header-title header-title'
-    'language-button language-button'
-    'login login-img-box';
+      'header-title header-title'
+      'language-button language-button'
+      'login login-img-box';
 
     gap: 1rem;
     padding-left: 2rem;
@@ -835,7 +861,7 @@ hr.divider {
     font-size: 1.4rem;
     text-align: left;
   }
-  
+
   header.header .login p {
     font-size: 1.2rem;
   }

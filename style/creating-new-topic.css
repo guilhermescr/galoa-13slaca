@@ -280,6 +280,7 @@ header.header .login p {
 
 header.header .login-img-box {
   height: 4.7rem;
+  cursor: pointer;
 }
 
 header.header .login-img-box #login-img {
@@ -422,6 +423,16 @@ header.header .login-img-box #login-img {
   padding: 0.6rem 1.2rem;
 
   cursor: pointer;
+}
+
+.aside .aside-info .btns button:hover {
+  background-color: hsl(21, 83%, 38%);
+  transition: .2s ease-in-out;
+}
+
+.aside .aside-info .btns button:active {
+  background-color: hsl(21, 83%, 68%);
+  transition: none;
 }
 
 .aside .aside-info .btns .download-span {
@@ -622,6 +633,16 @@ header.header .login-img-box #login-img {
   cursor: pointer;
 }
 
+.topics .font-settings button:hover {
+  background-image: linear-gradient(180deg, #df810e 0%, #f35d00 100%);
+  transition: .2s ease-in-out;
+}
+
+.topics .font-settings button:active {
+  background-image: linear-gradient(180deg, #ffc073 0%, #ffac79 100%);
+  transition: none;
+}
+
 hr.divider {
   border: 0.1rem solid hsl(0, 0%, 91%);
   margin: 0 auto;
@@ -673,6 +694,10 @@ hr.divider {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
+}
+
+.discussions .questions .question .question-footer img {
+  cursor: pointer;
 }
 
 .discussions .questions .question .question-footer p {

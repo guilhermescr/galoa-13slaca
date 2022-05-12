@@ -521,7 +521,7 @@ header.header .login-img-box #login-img {
   padding: 1.5rem;
 }
 
-.summary .summary-content strong a{
+.summary .summary-content strong a {
   color: var(--secondary-title-color);
   max-width: max-content;
 }
@@ -533,9 +533,8 @@ header.header .login-img-box #login-img {
   max-width: 77vw;
 }
 
-.discussions .topics,
-.discussions .questions {
-  padding: 3rem 1.5rem;
+.discussions .topics {
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 
 .discussions .topics {
@@ -550,20 +549,22 @@ header.header .login-img-box #login-img {
   color: var(--secondary-title-color);
 }
 
-.discussions .topics .topics-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 5.2rem;
+.discussions .topics .appreciate-txt {
+  font: normal 400 1.4rem var(--paragraph-font);
+  color: #595959;
+
+  max-width: 80.5rem;
+  line-height: 1.9rem;
+  text-align: center;
 }
 
-.discussions .topics .topics-generic-text {
-  font: normal 400 1.4rem var(--paragraph-font);
-  color: #5c5c5c;
+.discussions .topics .other-jobs-link a {
+  color: hsl(26, 89%, 61%);
 
-  max-width: 64rem;
-  line-height: 2.3rem;
-  letter-spacing: 0.02rem;
+  font: normal 500 1.4rem var(--paragraph-font);
+  line-height: 1.925rem;
   text-align: center;
+  text-decoration: underline;
 }
 
 .discussions .topics .new-topic-box button {
@@ -576,14 +577,13 @@ header.header .login-img-box #login-img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.6rem;
 
-  max-width: 13.3rem;
+  max-width: 23.5rem;
   height: 3.2rem;
-  padding: 0.7rem 1.3rem;
+  padding: 0.8rem 5.5rem;
 
   cursor: pointer;
-  transform: translateY(150%);
+  transform: translateY(100%);
 }
 
 .discussions .topics .new-topic-box button:hover {
@@ -599,6 +599,8 @@ header.header .login-img-box #login-img {
 .discussions .topics .new-topic-box button .new-topic-txt a {
   font: normal 700 1.5rem var(--paragraph-font);
   color: #fff;
+  line-height: 1.6rem;
+  text-align: center;
 }
 
 hr.divider {
@@ -613,7 +615,67 @@ hr.divider {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 1.7rem;
+  padding: 3rem 1.5rem;
+}
+
+.questions .opacity-container {
+  background-color: hsl(0, 0%, 96%);
+  box-shadow: 0rem 0rem 0.8rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.4rem;
+
+  position: relative;
+}
+
+.questions .waiting-answers-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  max-width: 41.4rem;
+
+  z-index: 1;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+}
+
+.questions .waiting-answers-box svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.questions .waiting-answers-box h4 {
+  color: hsl(0, 0%, 44%);
+
+  font: normal 700 1.6rem var(--paragraph-font);
+  line-height: 2rem;
+  transform: translateX(-20%);
+}
+
+.questions .waiting-answers-box p {
+  color: var(--secondary-title-color);
+
+  font: normal 400 1.4rem 'Segoe UI', sans-serif;
+  text-decoration: underline;
+
+  margin: 0 auto;
+  max-width: max-content;
+  line-height: 1.9rem;
+  cursor: pointer;
+}
+
+.opacity-container .question {
+  margin-bottom: 3rem;
+
+  opacity: 0.3;
+  filter: blur(0.4rem);
+  cursor: default;
+}
+
+.opacity-container .question #q-icons {
+  display: none;
 }
 
 .discussions .questions .question {
@@ -844,9 +906,9 @@ hr.divider {
     display: grid;
     grid-template-columns: 65vw;
     grid-template-areas:
-    'header-title header-title'
-    'language-button language-button'
-    'login login-img-box';
+      'header-title header-title'
+      'language-button language-button'
+      'login login-img-box';
 
     gap: 1rem;
     padding-left: 2rem;
@@ -861,7 +923,7 @@ hr.divider {
     font-size: 1.4rem;
     text-align: left;
   }
-  
+
   header.header .login p {
     font-size: 1.2rem;
   }
@@ -954,6 +1016,15 @@ hr.divider {
 
   .summary .summary-content p {
     text-align: justify;
+  }
+
+  .questions .waiting-answers-box {
+    left: 12%;
+  }
+
+  .questions .waiting-answers-box h4 {
+    transform: translateX(0%);
+    width: 30rem;
   }
 
   .footer {
